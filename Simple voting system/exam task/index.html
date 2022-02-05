@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Voting System</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+Pro:wght@200;400;600&family=Titillium+Web:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="first">
+            <p class="tt1">Department of ICT</p>
+            <p class="tt2">Class Representative Election System</p>
+        </div>
+        <div class="two">
+            <div class="logo">
+                <img src="./img/any.jpg" alt="ICT_department Logo">
+            </div>
+            <div class="first1">
+                <table class="two2">
+                    <tr>
+                        <td>
+                            <label>Voter Name:</label>
+                            <input id="name"class="userinput" type="text">
+                        </td>
+                        <td>
+                            <label>Gender:</label>
+                            Male<input id="m" type="radio" name="gender">
+                            Female<input id="f" type="radio" name="gender">
+                        </td>
+                        <td>
+                            <label>Class:</label>
+                            <select id="Tkclass"  Name="List Box" Size="1">  
+                                <option value="2TK1"> 2TK1 </option>  
+                                <option value="4TK1"> 4TK1 </option>  
+                                <option value="6TK1"> 6TK1 </option>  
+                                <option value="8TK1"> 8TK1 </option>  
+                            </select>  
+                        </td>
+                    </tr>
+                </table>
+                <button id="btn"  class="buttonofvoter" onclick="btnvot()">Add Voter</button>
+            </div>
+        </div>
+        <div class="tableofdata">
+            <div class="allvoter">
+                <div class="table3">
+                    <p>All Available Voters</p>
+                </div>
+                <div class="maindata">
+                    <table class="dataoftable">
+                        <thead>
+                            <tr>
+                                <th>Voter Name</th>
+                                <th>Gender</th>
+                                <th>Class</th>
+                                <th>Voting</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+            <div class="maintable1">
+                <div class="tabletwo">
+                    <p>All Available Voters</p>
+                </div>
+                <div class="datac">
+                    <table class="tablec">
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th id="text11">candidate-1</th>
+                            <th id="text12">candidate-2</th>
+                            <th id="text13">candidate-3</th>
+                            <th id="text14">candidate-4</th>
+                        </tr>
+                        <tr>
+                            <td>2TK1</td>
+                            <td id="candidate1s2">0</td>
+                            <td id="candidate2s2">0</td>
+                            <td id="candidate3s2">0</td>
+                            <td id="candidate4s2">0</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th id="t1">candidate-1</th>
+                            <th id="t2"> candidate-2</th>
+                            <th id="t3">candidate-3</th>
+                            <th id="t4">candidate-4</th>
+                        </tr>
+                        <tr>
+                            <td>4TK1</td>
+                            <td id="candidate1s4">0</td>
+                            <td id="candidate2s4">0</td>
+                            <td id="candidate3s4">0</td>
+                            <td id="candidate4s4">0</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th id="te1">candidate-1</th>
+                            <th id="te2">candidate-2</th>
+                            <th id="te3">candidate-3</th>
+                            <th id="te4">candidate-4</th>
+                        </tr>
+                        <tr>
+                            <td>6TK1</td>
+                            <td id="candidate1s6">0</td>
+                            <td id="candidate2s6">0</td>
+                            <td id="candidate3s6">0</td>
+                            <td id="candidate4s6">0</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th id="tex1">candidate-1</th>
+                            <th id="tex2">candidate-2</th>
+                            <th id="tex3">candidate-3</th>
+                            <th id="tex4">candidate-4</th>
+                        </tr>
+                        <tr>
+                            <td>8TK1</td>
+                            <td id="candidate1s8">0</td>
+                            <td id="candidate2s8"> 0</td>
+                            <td id="candidate3s8">0</td>
+                            <td id="candidate4s8">0</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="tabel2">
+                <table class="result">
+                    <tr>
+                        <td rowspan="4" class="bgcolor">Voting Area</td>
+                        <td>Voter Name</td>
+                        <td><input type="text" id="text1" disabled></td>
+                        <td>Gender</td>
+                        <td style="width: 10%;"><input  id="male"type="radio" name="gender" disabled>Male<br>
+                            <input id="female"type="radio" name="gender" disabled>Female</td>
+                        <td>Class</td>
+                        <td>
+                            <input type="text" id="text2" disabled style="width: 20%;">
+                        </td>
+                        <td></td>
+                        <td rowspan="4"><input type="button" value="Declare Result" class="bnt" onclick="declar()"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Candidate</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td rowspan="2"><input type="button" id="vbtn" value="Vote" class="bnt" onclick="vote()"></td>
+                        <td></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Vote</td>
+                        <td><input id="can1" type="radio" name="vote"></td>
+                        <td><input id="can2" type="radio" name="vote"></td>
+                        <td><input id="can3" type="radio" name="vote"></td>
+                        <td><input id="can4" type="radio" name="vote"></td>
+                        <td></td>
+                        
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
